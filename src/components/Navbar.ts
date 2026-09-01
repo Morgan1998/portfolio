@@ -47,12 +47,11 @@ export const Navbar = (): HTMLElement => {
     return link;
   };
 
-  const homeLink = createNavLink('Home', '/');
   const projectsLink = createNavLink('Projects', '/projects');
   const wipLink = createNavLink('WIP', '/wip');
   const contactLink = createNavLink('Contact', '/contact');
 
-  linksContainer.append(homeLink, projectsLink, wipLink, contactLink);
+  linksContainer.append(projectsLink, wipLink, contactLink);
   nav.append(logo, linksContainer);
   header.append(nav);
 
