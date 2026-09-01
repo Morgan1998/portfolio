@@ -1,0 +1,34 @@
+Phase 1: Initialization & Configuration
+Initialize Project: Create the directory, initialize npm, and install dependencies (Vite, TypeScript, Tailwind CSS, PostCSS, Autoprefixer).
+Configure Tailwind: Generate and set up the Tailwind and PostCSS configurations.
+Configure TypeScript: Set up the tsconfig.json for modern ES module rendering and DOM typing.
+Configure Vite: Create vite.config.ts to manage path aliases and environment parameters if needed.
+Set Up Deployment Redirect: Create the public/_redirects file for Netlify.
+
+Phase 2: Core Base & Styles
+Create Entry HTML (index.html): Set up the mounting container (e.g., <div id="app"></div>).
+Import Styles (src/style.css): Inject Tailwind directives into your primary style file.
+Bootstrap App (src/main.ts): Ensure the entry file mounts to the DOM and loads correctly.
+
+Phase 3: The Custom Router
+Define Routing Architecture (src/router.ts): Write a History API-based router that manages URL path changes and updates active states.
+Handle Navigation Events: Create custom logic to intercept anchor tag clicks, prevent default page reloads, and trigger state changes.
+Listen to Popstate Events: Ensure browser back/forward buttons correctly trigger route changes.
+
+Phase 4: Component & View Foundations
+Define Shared Types (src/types.ts): Create the interfaces for view/component factories.
+Build Core Views: Create lightweight, DOM node-based factories for:
+src/views/Home.ts (Simple placeholder)
+src/views/Projects.ts (Simple placeholder)
+src/views/WIP.ts (Simple placeholder)
+Build the Navbar Component (src/components/Navbar.ts): Write a factory that generates the header and navigation links, integrating them directly with the router.
+
+Phase 5: Contact Form Integration
+Build the Contact View (src/views/Contact.ts): Programmatically construct a <form> element.
+Implement Constraint Validation: Use browser-native APIs (setCustomValidity, checkValidity) within the factory function to validate form inputs.
+Handle Form Submission: Write submission handler logic inside the contact factory.
+
+Phase 6: Assembly & Testing
+Assemble the App Shell: Combine the Navbar and active Views within the main application mounting file (main.ts).
+Local Testing: Test routing transitions, route refreshes, back/forward buttons, and contact form validation.
+Build Verification: Run the Vite build command locally to ensure everything compiles cleanly to pure JavaScript and optimized CSS.
